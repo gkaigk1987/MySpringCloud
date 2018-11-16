@@ -44,5 +44,7 @@
 	<modules>
 		<module>Cloud-Common</module>
 		<module>Cloud-Eureka</module>
+		<module>Cloud-Service</module>
+		<module>Cloud-Feign</module>
 	</modules>
 </project>

@@ -7,11 +7,7 @@
 		<artifactId>MyCloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>Cloud-Eureka</artifactId>
-	
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+	<artifactId>Cloud-Feign</artifactId>
 	
 	<dependencies>
 		<dependency>
@@ -19,6 +15,21 @@
 			<artifactId>Cloud-Common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,9 +44,21 @@
 		</dependency>
 		
 		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
+		
+		 <!-- 解决 thymeleaf 模板引擎一定要执行严格的 html5 格式校验问题 -->
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+        </dependency>
+		
 	</dependencies>
 	
 	<build>
@@ -53,9 +76,9 @@
 			 <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
+                <!-- <configuration>
                     <mainClass>com.gk.cloud.eureka.EurekaApplication</mainClass>
-                </configuration>
+                </configuration> -->
             </plugin>
 		</plugins>
 	</build>

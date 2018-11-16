@@ -7,8 +7,8 @@
 		<artifactId>MyCloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>Cloud-Eureka</artifactId>
-	
+	<artifactId>Cloud-Service</artifactId>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -36,6 +36,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
+		
 	</dependencies>
 	
 	<build>
@@ -53,9 +54,9 @@
 			 <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
+                <!-- <configuration>
                     <mainClass>com.gk.cloud.eureka.EurekaApplication</mainClass>
-                </configuration>
+                </configuration> -->
             </plugin>
 		</plugins>
 	</build>
