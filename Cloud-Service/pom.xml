@@ -54,9 +54,9 @@
 			 <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!-- <configuration>
-                    <mainClass>com.gk.cloud.eureka.EurekaApplication</mainClass>
-                </configuration> -->
+                <configuration>
+                    <mainClass>com.gk.cloud.service.ServiceApplication</mainClass>
+                </configuration>
             </plugin>
 		</plugins>
 	</build>

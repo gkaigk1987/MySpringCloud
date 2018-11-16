@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cloud-zuul
+
+server: 
+  port: 9101
+
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+zuul:
+  routes:
+    api-a: 
+      path: /api/feign/**
+      service-id: cloud-client-feign #转发到app-name为cloud-client-feign微服务客户端
+#    api-b: 
+#      path: /api/xxx/**
+#      service-id: xxxx

@@ -9,10 +9,10 @@
 	</appender>
 	
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/feign.log</file>
+		<file>logs/zuul.log</file>
 		<!-- 基于日志大小和时间的日志归档 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>logs/feign-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>logs/zuul-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<maxFileSize>100MB</maxFileSize>
 			<!-- 日志保存60天 -->
 			<maxHistory>60</maxHistory>
