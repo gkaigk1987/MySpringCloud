@@ -4,7 +4,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(value = "cloud-service")
+import com.gk.cloud.feign.hystrix.AdminServiceHystrix;
+
+@FeignClient(value = "cloud-service",fallback = AdminServiceHystrix.class)
 public interface AdminService {
 
 	@GetMapping("/helloCloud/{msg}")
