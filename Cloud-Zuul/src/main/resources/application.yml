@@ -18,3 +18,9 @@ zuul:
 #    api-b: 
 #      path: /api/xxx/**
 #      service-id: xxxx
+  retryable: true #开启重试功能
+
+ribbon: 
+  MaxAutoRetries: 2 #重试次数
+  MaxAutoRetriesNextServer: 1 #其他服务重试次数
+  

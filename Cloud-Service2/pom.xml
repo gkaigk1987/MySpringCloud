@@ -7,7 +7,11 @@
 		<artifactId>MyCloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>Cloud-Zuul</artifactId>
+	<artifactId>Cloud-Service2</artifactId>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	
 	<dependencies>
 		<dependency>
@@ -15,16 +19,6 @@
 			<artifactId>Cloud-Common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-	
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-	
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
 	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,18 +33,8 @@
 		</dependency>
 		
 		<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-        </dependency>
-
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.springframework.retry</groupId>
-		    <artifactId>spring-retry</artifactId>
 		</dependency>
 		
 	</dependencies>
@@ -71,7 +55,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.gk.cloud.zuul.ZuulApplication</mainClass>
+                    <mainClass>com.gk.cloud.service.ServiceApplication</mainClass>
                 </configuration>
             </plugin>
 		</plugins>
