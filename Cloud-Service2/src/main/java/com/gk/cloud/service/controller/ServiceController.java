@@ -29,11 +29,12 @@ public class ServiceController {
 	@GetMapping("/helloCloud/{msg}")
 	public String helloCloud(@PathVariable String msg) {
 		logger.info("Request Message is {}",msg);
-		try {
-			Thread.sleep(50000);
-		} catch (Exception e) {
-			logger.error("Time out error,{}",e);
-		}
+		//以下是测试重试的代码
+//		try {
+//			Thread.sleep(50000);
+//		} catch (Exception e) {
+//			logger.error("Time out error,{}",e);
+//		}
 		return String.format("Hello Spring Cloud, your message is %s from port: %s", msg, serverPort);
 	}
 	

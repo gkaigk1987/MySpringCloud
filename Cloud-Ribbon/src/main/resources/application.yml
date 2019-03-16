@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cloud-client-ribbon
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+
+server: 
+  port: 9002
+
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+

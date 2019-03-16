@@ -25,6 +25,7 @@
 		<junit.version>4.12</junit.version>
 		<mysql.version>5.1.47</mysql.version>
 		<spring.cloud.version>Finchley.SR2</spring.cloud.version>
+		<zipkin.version>2.10.1</zipkin.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -36,7 +37,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			
 		</dependencies>
 	</dependencyManagement>
 
@@ -46,6 +46,8 @@
 		<module>Cloud-Service</module>
 		<module>Cloud-Feign</module>
 		<module>Cloud-Zuul</module>
-    <module>Cloud-Service2</module>
-  </modules>
+    	<module>Cloud-Service2</module>
+    	<module>Cloud-Ribbon</module>
+    	<module>Cloud-Zipkin</module>
+	</modules>
 </project>

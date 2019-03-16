@@ -11,14 +11,14 @@ eureka:
       defaultZone: http://localhost:7001/eureka/
 
 zuul:
+  retryable: true #开启重试功能
   routes:
     api-a: 
       path: /api/feign/**
       service-id: cloud-client-feign #转发到app-name为cloud-client-feign微服务客户端
-#    api-b: 
-#      path: /api/xxx/**
-#      service-id: xxxx
-  retryable: true #开启重试功能
+    api-b: 
+      path: /api/ribbon/**
+      service-id: cloud-client-ribbon #转发到app-name为cloud-client-ribbon微服务客户端
 
 ribbon: 
   MaxAutoRetries: 2 #重试次数
