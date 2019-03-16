@@ -1,16 +1,20 @@
 spring:
   application:
-    name: cloud-service
-  zipkin: #链路追踪
-    base-url: http://localhost:8003
+    name: cloud-zipkin
 
 server:
-  port: 8001
+  port: 8003
 
 eureka: 
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+      
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false    
       
   
       
