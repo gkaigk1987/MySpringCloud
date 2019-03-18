@@ -8,6 +8,9 @@ server:
   port: 7001
 
 eureka:
+  server:
+    enable-self-preservation: false #关闭自我保护
+    eviction-interval-timer-in-ms: 30000 #清理无效节点的时间间隔
   instance:
     hostname: localhost
   client:
