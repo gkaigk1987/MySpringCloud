@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cloud-admin-client
+  boot:
+    admin:
+      client: 
+        url: http://localhost:7101
+  zipkin: #链路追踪
+    base-url: http://localhost:8003
+
+server: 
+  port: 7102
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

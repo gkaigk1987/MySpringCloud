@@ -26,6 +26,7 @@
 		<mysql.version>5.1.47</mysql.version>
 		<spring.cloud.version>Finchley.SR2</spring.cloud.version>
 		<zipkin.version>2.10.1</zipkin.version>
+		<admin.version>2.0.0</admin.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -49,5 +50,7 @@
     	<module>Cloud-Service2</module>
     	<module>Cloud-Ribbon</module>
     	<module>Cloud-Zipkin</module>
+    <module>Cloud-Admin-Server</module>
+    <module>Cloud-Admin-Client</module>
 	</modules>
 </project>
