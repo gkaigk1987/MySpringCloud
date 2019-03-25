@@ -17,4 +17,9 @@ public class AdminServiceHystrix implements AdminService {
 		return "your message is " + msg + ", but request error.";
 	}
 
+	@Override
+	public String jsonReceive(String params) {
+		return null;
+	}
+
 }
