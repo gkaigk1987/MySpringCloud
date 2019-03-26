@@ -50,7 +50,8 @@
     	<module>Cloud-Service2</module>
     	<module>Cloud-Ribbon</module>
     	<module>Cloud-Zipkin</module>
-    <module>Cloud-Admin-Server</module>
-    <module>Cloud-Admin-Client</module>
-	</modules>
+    	<module>Cloud-Admin-Server</module>
+    	<module>Cloud-Admin-Client</module>
+    	<module>Cloud-OAuth2</module>
+  </modules>
 </project>
