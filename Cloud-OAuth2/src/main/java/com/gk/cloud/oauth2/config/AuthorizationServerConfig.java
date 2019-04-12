@@ -36,6 +36,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
+	/**
+	 * JWT令牌存储
+	 * @return
+	 */
 	@Bean
 	public TokenStore tokenStore( ) {
 		return new JwtTokenStore(accessTokenConverter());

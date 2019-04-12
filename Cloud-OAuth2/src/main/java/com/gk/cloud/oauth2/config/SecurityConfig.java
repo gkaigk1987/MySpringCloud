@@ -19,6 +19,10 @@ import com.gk.cloud.oauth2.security.MyUserDetailsService;
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
+	/**
+	 * 密码加密器
+	 * @return
+	 */
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
@@ -26,8 +30,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	/**
-	 * 认证
-	 * 不定义没有password grant_type
+	 * 	认证管理器,不定义没有password grant_type
+	 * 
 	 */
 	@Override
 	@Bean

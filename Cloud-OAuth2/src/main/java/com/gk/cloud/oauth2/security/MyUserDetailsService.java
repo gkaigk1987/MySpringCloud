@@ -21,6 +21,9 @@ public class MyUserDetailsService implements UserDetailsService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
+	/**
+	 * 此处写死了用户名，做测试用
+	 */
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 		if("GaoKai".equalsIgnoreCase(userName)) {
