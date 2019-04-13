@@ -23,6 +23,11 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 import com.gk.cloud.oauth2.security.MyUserDetailsService;
 
+/**
+ * 配置授权资源服务器
+ * @author gk
+ * 2019年4月13日 下午1:59:03
+ */
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
@@ -80,10 +85,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		 clients.inMemory()
          		.withClient("app")
          		.secret(passwordEncoder.encode("app"))
-         		.authorizedGrantTypes("password","authorization_code", "implicit")
+         		.authorizedGrantTypes("password","authorization_code", "implicit","refresh_token")
          		.authorities("ROLE_CLIENT","ROLE_ADMIN")
          		.scopes("read","write")
-         		.accessTokenValiditySeconds(3600);
+         		.accessTokenValiditySeconds(600)
+         		.refreshTokenValiditySeconds(300);
 	}
 	
 }

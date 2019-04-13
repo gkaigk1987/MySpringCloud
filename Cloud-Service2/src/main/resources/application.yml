@@ -10,7 +10,13 @@ server:
 eureka: 
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka/ #http://192.168.10.87:7001/eureka/
+      defaultZone: http://localhost:7001/eureka/
       
-  
+security:
+  oauth2:
+    resource:
+      id: cloud-service
+      # 指定用户信息地址
+      user-info-uri: http://localhost:9012/auth/user
+      prefer-token-info: false  
       

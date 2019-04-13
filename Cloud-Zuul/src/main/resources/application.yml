@@ -21,6 +21,15 @@ zuul:
     api-b: 
       path: /api/ribbon/**
       service-id: cloud-client-ribbon #转发到app-name为cloud-client-ribbon微服务客户端
+    #配置OAuth2权限服务
+    api-auth:
+      path: /auth/**
+      # 敏感头 代表不过滤任何信息
+      sensitive-headers:
+      service-id: cloud-client-oauth2
+
+  #添加代理头
+  add-proxy-headers: true
 
 ribbon: 
   MaxAutoRetries: 2 #重试次数
