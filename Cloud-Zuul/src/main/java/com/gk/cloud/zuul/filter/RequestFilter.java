@@ -44,32 +44,32 @@ public class RequestFilter extends ZuulFilter {
 
 	@Override
 	public Object run() throws ZuulException {
-		RequestContext requestContext = RequestContext.getCurrentContext();
-		HttpServletRequest request = requestContext.getRequest();
-		String contentType = request.getHeader("Content-Type");
-		System.out.println("================"+ contentType +"================");
-		Map<String, String[]> parameterMap = request.getParameterMap();
-		if(null == parameterMap || parameterMap.size() < 1) {
-			if(contentType.indexOf("multipart/form-data") >= 0) {
-				//二进制类型传递参数，可上传副本
-				logger.info("当前content-type为:{},无法获取参数",contentType);
-			}else {
-				//JSON格式
-				try {
-					String reqBody = StreamUtils.copyToString(request.getInputStream(), Charset.forName("UTF-8"));
-					logger.info("reqBody: {}",reqBody);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}else {
-			//非JSON格式
-			Map<String,String> params = new HashMap<>();
-            for (Map.Entry<String, String[]> entry : parameterMap.entrySet()) {
-                params.put(entry.getKey(),printArray(entry.getValue()));
-            }
-            logger.info("parameters:{}",JSONObject.toJSONString(parameterMap));
-		}
+//		RequestContext requestContext = RequestContext.getCurrentContext();
+//		HttpServletRequest request = requestContext.getRequest();
+//		String contentType = request.getHeader("Content-Type");
+//		System.out.println("================"+ contentType +"================");
+//		Map<String, String[]> parameterMap = request.getParameterMap();
+//		if(null == parameterMap || parameterMap.size() < 1) {
+//			if(contentType.indexOf("multipart/form-data") >= 0) {
+//				//二进制类型传递参数，可上传副本
+//				logger.info("当前content-type为:{},无法获取参数",contentType);
+//			}else {
+//				//JSON格式
+//				try {
+//					String reqBody = StreamUtils.copyToString(request.getInputStream(), Charset.forName("UTF-8"));
+//					logger.info("reqBody: {}",reqBody);
+//				} catch (IOException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		}else {
+//			//非JSON格式
+//			Map<String,String> params = new HashMap<>();
+//            for (Map.Entry<String, String[]> entry : parameterMap.entrySet()) {
+//                params.put(entry.getKey(),printArray(entry.getValue()));
+//            }
+//            logger.info("parameters:{}",JSONObject.toJSONString(parameterMap));
+//		}
 		
 		return null;
 	}
