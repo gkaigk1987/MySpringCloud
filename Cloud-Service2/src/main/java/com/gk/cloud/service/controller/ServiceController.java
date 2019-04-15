@@ -3,7 +3,6 @@ package com.gk.cloud.service.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,12 +36,6 @@ public class ServiceController {
 //			logger.error("Time out error,{}",e);
 //		}
 		return String.format("Hello Spring Cloud, your message is %s from port: %s", msg, serverPort);
-	}
-	
-	@PreAuthorize("hasRole('ROLE_ADMIN')")	//有什么角色
-	@GetMapping("/admin")
-	public String oauthAdmin() {
-		return "Hello OAuth2 Admin";
 	}
 	
 }

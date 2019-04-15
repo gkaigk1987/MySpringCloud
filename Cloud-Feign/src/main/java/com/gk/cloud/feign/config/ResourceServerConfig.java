@@ -1,4 +1,4 @@
-package com.gk.cloud.service.config;
+package com.gk.cloud.feign.config;
 
 import javax.servlet.http.HttpServletResponse;
 

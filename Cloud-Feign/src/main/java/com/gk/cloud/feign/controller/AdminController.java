@@ -1,6 +1,7 @@
 package com.gk.cloud.feign.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ public class AdminController {
 	@Autowired
 	private AdminService adminService;
 	
+	@PreAuthorize("hasRole('ROLE_ADMIN')")	//有什么角色
 	@GetMapping("/helloCloud/{message}")
 	public String helloCloud(@PathVariable(value="message") String message) {
 		return adminService.helloCloud(message);
