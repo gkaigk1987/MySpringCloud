@@ -17,6 +17,8 @@ zuul:
   routes:
     api-a: 
       path: /api/feign/**
+      # 敏感头 代表不过滤任何信息 这边必需设置，否则OAuth2服务会对该URL报Unauthorized
+      sensitive-headers: 
       service-id: cloud-client-feign #转发到app-name为cloud-client-feign微服务客户端
     api-b: 
       path: /api/ribbon/**

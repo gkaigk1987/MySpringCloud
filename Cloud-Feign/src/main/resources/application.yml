@@ -39,7 +39,7 @@ ribbon:
 security:
   oauth2:
     resource:
-      id: cloud-service
+      id: cloud-client-feign
       # 指定用户信息地址
-      user-info-uri: http://localhost:9012/auth/user
+      user-info-uri: http://localhost:9101/auth/user
       prefer-token-info: false 
