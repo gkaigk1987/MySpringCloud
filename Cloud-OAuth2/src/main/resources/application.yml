@@ -8,6 +8,10 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
 
+logging:
+  level:
+    org.springframework: debug   #开启Spring日志打印级别
+
 server: 
   port: 9012
   

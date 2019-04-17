@@ -88,8 +88,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
          		.authorizedGrantTypes("password","authorization_code", "implicit","refresh_token")
          		.authorities("ROLE_CLIENT","ROLE_ADMIN")
          		.scopes("read","write")
-         		.accessTokenValiditySeconds(3600)
-         		.refreshTokenValiditySeconds(3600);
+         		.accessTokenValiditySeconds(3600) // 一个小时
+         		.refreshTokenValiditySeconds(3600 * 24 * 30);	// 30天
 	}
 	
 }
