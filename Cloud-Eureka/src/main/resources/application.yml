@@ -3,6 +3,10 @@ spring:
     name: eureka-server
   zipkin: #链路追踪
     base-url: http://localhost:8003
+#  security:    #开启eureka登录认证，当前被注释掉
+#    user:
+#      name: gk1987
+#      password: 123456
 
 server:
   port: 7001
@@ -17,5 +21,6 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
+#      defaultZone: http://gk1987:123456@${eureka.instance.hostname}:${server.port}/eureka/ #eureka开启登录认证的话需要写成此种，当前被注释掉
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       

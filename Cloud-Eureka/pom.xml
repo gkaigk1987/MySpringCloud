@@ -43,6 +43,14 @@
 		    <artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 		
+		<!-- eureka启动登录认证需要security支持 -->
+		<!-- 
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>
+		</dependency> 
+		-->
+		
 	</dependencies>
 	
 	<build>

@@ -11,6 +11,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+#      defaultZone: http://gk1987:123456@localhost:7001/eureka/ #eureka开启登录认证需这样写，当前被注释掉
       
   
       
